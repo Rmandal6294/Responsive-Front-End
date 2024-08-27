@@ -1,2 +1,2 @@
 # Responsive-Front-End
-This is my collection of Responsive Designed 
+<h2> <i> This is my collection of Responsive Designed </i> </h2>

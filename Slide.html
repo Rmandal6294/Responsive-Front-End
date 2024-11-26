@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Images</title>
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            background-color: #b0d50c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            transition: 1s;
+            position: sticky;
+            top:0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        header:hover{
+            background-color: #78da0f;
+        }
+        header a{
+            text-decoration: none;
+            padding: 10px;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: .6s;
+        }
+        header a:hover{
+            color: rgb(132, 17, 203);
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+        header a:last-child{
+            float: right;
+            background-color: blue;
+            border-radius: 11px;
+            border: 2px solid whitesmoke;
+            color: white;
+            transition: .3s;
+        }
+        header a:last-child:hover{
+            color: wheat;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            box-shadow: 3px 4px 4px 3px rgb(57, 57, 57);
+        }
+        main {
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor:pointer;
+
+        }
+        .post{
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .post img{
+            object-fit: cover;
+            border-radius: 10px 10px 0px 0px;
+            text-align: center;
+            width: 100%;
+            height: 200px;
+        }
+        h2 {
+            margin-bottom: 0px;
+            padding: 10px;
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(62, 60, 60);
+        }
+        p {
+            padding: 10px;
+            text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #666;
+        }
+        .box{
+            background-color: lightskyblue;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .news{
+            text-align: justify;
+            margin-bottom: 20px;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+            box-shadow: 10px 10px 0px 0px red,3px 3px 10px crimson;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 100px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+        }
+        h3{
+            background-color: rgb(196, 59, 59);
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            border-radius: 15px 15px 0px 0px;
+            text-shadow: 1.5px 1.5px gray;
+        }
+        .news > p{
+            padding: 10px;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #666;
+            border-bottom: 1px solid whitesmoke;
+            border-left: 1px solid whitesmoke;
+            border-right: 1px solid whitesmoke;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 100px;
+            overflow: hidden;
+        }
+        .section_3{
+            background-color: whitesmoke;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 15px 15px 10px 10px;
+            margin-bottom: 20px;
+            box-shadow: 10px 10px 10px lightblue;
+        }
+        .headline{
+            background-color: darkgray;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            border-radius: 15px 15px 0px 0px;
+            text-shadow: 1.5px 1.5px gray;
+            font-size: larger;
+        }
+        .line{
+            border-bottom: 1px solid darkgray;
+            margin: 0;
+            padding: 10px;
+            text-align: justify;
+            column-gap: 30px;
+            column-count: 3;
+            border-left: 1px solid darkgray;
+            border-right: 1px solid darkgray;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .section_4{
+            padding: 20px;
+            margin: 20px;
+            background-color: antiquewhite;
+            border-radius: 10px 20px 30px 40px;
+        }
+        .quot{
+            display: flex;
+            border: 2px solid darkgray;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .quot > img{
+            border: 2px solid gold;
+            border-radius: 50%;
+            transition: 1s;
+        }
+        .quot > img:hover{
+            border: 1.5px dashed goldenrod;
+            width:115px;
+            height: 115px;
+        }
+        .topline{
+            font-weight: bold;
+            font-size: medium;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #615959;
+            padding: 10px;
+        }
+        footer{
+            background-color: #615959;
+            padding: 20px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        footer > p{
+            color: #fff;
+            font-size: 15px;
+            font-family: monospace;
+        }
+        .name{
+            font-weight: bold;
+            font-size: medium;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: crimson;
+            padding: 10px;
+            text-shadow: 1.5px 1px gold;
+        }
+        .list_section{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .list_section > ul{
+            list-style-type: none;
+            padding: 10PX;
+            margin: 20PX;
+        }
+        .list_section > ul > li{
+            margin: 5PX;
+        }
+        .list_section > ul > li > a{
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            transition: .5s;
+        }
+        .list_section > ul > li > a:hover{
+            color: skyblue;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href = "Slide.html" target="_blank"> Home </a>
+            <a href = "Contacts.html" target="_blank"> Contacts </a>
+            <a href = "info.html" target="_blank"> Info </a>
+            <a href = "Singin.html" target="_blank"> Log In </a>
+        </nav>
+    </header>
+    <main>
+        <div class = "container">
+            <div class="post">
+                <img src = "IMG_20210819_182633.jpg" alt = "post1">
+                <h2>My Second Blog Post</h2>
+                <p>In this post, I'll be discussing the importance of user experience in web design and sharing some best practices for creating user-friendly websites.</p>
+                <p>In this post, I'll be discussing the importance of user experience in web design and sharing some best practices for creating user-friendly websites.</p>
+            </div>
+            <div class="post">
+                <img src = "IMG_20210819_182845.jpg" alt = "post2">
+                <h2>My Second Blog Post</h2>
+                <p>In this post, I'll be discussing the importance of user experience in web design and sharing some best practices for creating user-friendly websites.</p>
+                <p>In this post, I'll be discussing the importance of user experience in web design and sharing some best practices for creating user-friendly websites.</p>
+            </div>
+            <div class="post">
+                <img src = "IMG_20210820_215235.jpg" alt = "post3">
+                <h2>My Third Blog Post</h2>
+                <p>Finally, in this post, I'll be talking about the latest trends in web development and how you can stay up-to-date with the latest technologies and techniques.</p>
+                <p>In this post, I'll be discussing the importance of user experience in web design and sharing some best practices for creating user-friendly websites.</p>
+            </div>
+        </div>
+        <div class ="box">
+            <div class = "news">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, vero?</h3>
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure
+                     praesentium obcaecati eaque, odit iste dignissimos enim laudantium 
+                     ducimus. Veniam ipsa provident necessitatibus et earum culpa voluptas 
+                     ex delectus, cum dolorum adipisci pariatur, quis aspernatur nostrum, id 
+                     exercitationem praesentium. Aut totam labore excepturi dolorum ratione, 
+                    quibusdam laboriosam omnis incidunt architecto.
+                </p>
+            </div>
+            <div class = "news">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, vero?</h3>
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure
+                     praesentium obcaecati eaque, odit iste dignissimos enim laudantium 
+                     ducimus. Veniam ipsa provident necessitatibus et earum culpa voluptas 
+                     ex delectus, cum dolorum adipisci pariatur, quis aspernatur nostrum, id 
+                     exercitationem praesentium. Aut totam labore excepturi dolorum ratione, 
+                    quibusdam laboriosam omnis incidunt architecto.
+                </p>
+            </div>
+            <div class = "news">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, vero?</h3>
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure
+                     praesentium obcaecati eaque, odit iste dignissimos enim laudantium 
+                     ducimus. Veniam ipsa provident necessitatibus et earum culpa voluptas 
+                     ex delectus, cum dolorum adipisci pariatur, quis aspernatur nostrum, id 
+                     exercitationem praesentium. Aut totam labore excepturi dolorum ratione, 
+                    quibusdam laboriosam omnis incidunt architecto.
+                </p>
+            </div>
+        </div>
+        <div class = "section_3">
+            <p class ="headline">
+                Newslatter
+            </p>
+            <p class ="line">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure
+                praesentium obcaecati eaque, odit iste dignissimos enim laudantium 
+                ducimus. Veniam ipsa provident necessitatibus et earum culpa voluptas 
+                ex delectus, cum dolorum adipisci pariatur, quis aspernatur nostrum, id 
+                exercitationem praesentium. Aut totam labore excepturi dolorum ratione, 
+                quibusdam laboriosam omnis incidunt architecto.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
+                odio, doloribus delectus, laborum fugiat voluptas unde corrupti vitae 
+                expedita totam commodi voluptatum asperiores rerum eligendi quaerat? 
+                In ex voluptatem ad ea beatae numquam. Quod, mollitia numquam 
+                cupiditate exercitationem adipisci illum hic accusamus iste eos, 
+                aliquid voluptatum, itaque dolores provident ullam veritatis sint 
+                suscipit quo facere fuga sapiente explicabo voluptates consequuntur 
+                saepe! Nihil voluptates nam cupiditate aliquid quae? Aspernatur fugiat 
+                iure nesciunt provident ut deserunt doloremque magni ullam, neque 
+                nihil autem repudiandae doloribus suscipit impedit voluptatum, quas 
+                rem voluptatibus temporibus repellat dolorum. Rem eum quae doloremque 
+                iste ex ducimus eaque alias.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure
+                praesentium obcaecati eaque, odit iste dignissimos enim laudantium 
+                ducimus. Veniam ipsa provident necessitatibus et earum culpa voluptas 
+                ex delectus, cum dolorum adipisci pariatur, quis aspernatur nostrum, id 
+                exercitationem praesentium. Aut totam labore excepturi dolorum ratione, 
+                quibusdam laboriosam omnis incidunt architecto.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
+                odio, doloribus delectus, laborum fugiat voluptas unde corrupti vitae 
+                expedita totam commodi voluptatum asperiores rerum eligendi quaerat? 
+                In ex voluptatem ad ea beatae numquam. Quod, mollitia numquam 
+                cupiditate exercitationem adipisci illum hic accusamus iste eos, 
+                aliquid voluptatum, itaque dolores provident ullam veritatis sint 
+                suscipit quo facere fuga sapiente explicabo voluptates consequuntur 
+                saepe! Nihil voluptates nam cupiditate aliquid quae? Aspernatur fugiat 
+                iure nesciunt provident ut deserunt doloremque magni ullam, neque 
+                nihil autem repudiandae doloribus suscipit impedit voluptatum, quas 
+                rem voluptatibus temporibus repellat dolorum. Rem eum quae doloremque 
+                iste ex ducimus eaque alias.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure
+                praesentium obcaecati eaque, odit iste dignissimos enim laudantium 
+                ducimus. Veniam ipsa provident necessitatibus et earum culpa voluptas 
+                ex delectus, cum dolorum adipisci pariatur, quis aspernatur nostrum, id 
+                exercitationem praesentium. Aut totam labore excepturi dolorum ratione, 
+                quibusdam laboriosam omnis incidunt architecto.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
+                odio, doloribus delectus, laborum fugiat voluptas unde corrupti vitae 
+                expedita totam commodi voluptatum asperiores rerum eligendi quaerat? 
+                In ex voluptatem ad ea beatae numquam. Quod, mollitia numquam 
+                cupiditate exercitationem adipisci illum hic accusamus iste eos, 
+                aliquid voluptatum, itaque dolores provident ullam veritatis sint 
+                suscipit quo facere fuga sapiente explicabo voluptates consequuntur 
+                saepe! Nihil voluptates nam cupiditate aliquid quae? Aspernatur fugiat 
+                iure nesciunt provident ut deserunt doloremque magni ullam, neque 
+                nihil autem repudiandae doloribus suscipit impedit voluptatum, quas 
+                rem voluptatibus temporibus repellat dolorum. Rem eum quae doloremque 
+                iste ex ducimus eaque alias.
+            </p>
+        </div>
+        <div class = "section_4">
+            <div class ="quot">
+                <img src = "see.jpg" alt = "pic_1" width = "100px" height = "100px">
+                <p class="topline">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, eum.<br><br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
+                    odio, doloribus delectus, laborum fugiat voluptas unde corrupti vitae 
+                    expedita totam commodi voluptatum asperiores rerum eligendi quaerat?
+                </p>
+            </div>
+            <div class ="quot">
+                <img src = "IMG_20230103_141502.jpg" alt = "pic_1" width = "100px" height = "100px">
+                <p class="topline">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, eum.<br><br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
+                    odio, doloribus delectus, laborum fugiat voluptas unde corrupti vitae 
+                    expedita totam commodi voluptatum asperiores rerum eligendi quaerat?
+                </p>
+            </div>
+            <div class ="quot">
+                <img src = "IMG_20230103_141545.jpg" alt = "pic_1" width = "100px" height = "100px">
+                <p class="topline">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, eum.<br><br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium 
+                    odio, doloribus delectus, laborum fugiat voluptas unde corrupti vitae 
+                    expedita totam commodi voluptatum asperiores rerum eligendi quaerat?
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="name">
+            GoldPlanate
+        </p>
+        <div class="list_section">
+            <ul>
+                <li>
+                    <a href = "Slide.html">Home</a>
+                </li>
+                <li>
+                    <a href = "info.html">About</a>
+                </li>
+                <li>
+                    <a href = "">Services</a>
+                </li>
+                <li>
+                    <a href = "Contacts.html">Contact</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href = "">News</a>
+                </li>
+                <li>
+                    <a href = "">List</a>
+                </li>
+                <li>
+                    <a href = "">Artical</a>
+                </li>
+                <li>
+                    <a href = "">Yesterday</a>
+                </li>
+                <li>
+                    <a href = "">Newslatter</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href = "">Politics</a>
+                </li>
+                <li>
+                    <a href = "">Science</a>
+                </li>
+                <li>
+                    <a href = "">Techonology</a>
+                </li>
+                <li>
+                    <a href = "">Sport</a>
+                </li>
+                <li>
+                    <a href = "">Leadership</a>
+                </li>
+            </ul>
+
+        </div>
+        <p>
+            &copy; 2024 Blogging Site. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

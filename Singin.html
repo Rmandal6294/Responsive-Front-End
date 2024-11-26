@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: skyblue;
+            color: whitesmoke;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            border-left: 3px solid gold;
+        }
+        
+        form:nth-of-type(1) {
+            display: block;
+        }
+        
+        h2 {
+            margin-top: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px 15px 0px 0px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        button[type="submit"],button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: skyblue;
+            color: #fff;
+            box-shadow: 4px 4px 5px gray;
+            border: 1px solid wheat;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sign In/Sign Up</h1>
+    </header>
+    <main>
+        <form id="sign-in-form" action="">
+            <h2>Sign In</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Passkey" required>
+
+            <button type="submit">Sign In</button>
+            <button onclick = "singUp()" style="position:absolute; right:5px;">
+                Sing up
+            </button>
+        </form>
+
+        <form id="sign-up-form" action="">
+            <h2>Sign Up</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+            <label for="password"> Confirm Password:</label>
+            <input type="password" id="Confirm_password" name="confirm_password" placeholder="Retype password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Sign In/Sign Up. All rights reserved.</p>
+    </footer>
+    <script>
+        function singUp(){
+            document.getElementById("sign-up-form").style.display = "block";
+            document.getElementById("sign-in-form").style.display = "none";
+        }
+    </script>
+</body>
+</html>

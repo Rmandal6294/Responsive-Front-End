@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home|--->|About me (BP)</title>
+    <style> 
+        html {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: rgb(232, 243, 246);
+            padding: 0;
+            margin: 0;
+        }
+        h1 {
+            color: #040404;
+            text-align: center;
+            padding: 20px;
+        }
+        .text {
+            text-align: center;
+        }
+
+        #container1 {
+            text-align: center;
+        }
+        .stoke_img {
+            width: 99%;
+            height: 100%;
+            border-radius: 5px;
+            margin:0px;
+            border: none;
+        }
+        #container2 {
+            text-align: center;
+            background-color: aliceblue;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        .button {
+            width: 100%;
+            background: rgb(121, 161, 202);
+            margin-top: 10px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+        }
+        button {
+            width: 32%;
+            padding: 10px;
+            background-color:  rgb(123, 158, 194);
+            border: none;
+            cursor: pointer;
+            font-size: 11pt;
+        }
+        button:hover{
+            background: white;
+            border: 1px solid blue;
+            border-radius: 6px;
+        }
+        .sit {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 10px;
+            color: black;
+            font-weight: bold;
+        }
+        #content {
+            margin-top: 0px;
+            padding: 10px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        footer {
+            font-size: larger;
+            color: crimson;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            text-align: center;
+            margin: 0;
+        }
+        .too{
+            text-align: start;
+            color: #333;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        @media only screen and (min-width: 480px) {
+            .main {
+                display: flex;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                height: 300px;
+            }
+            header {
+                height: 200px;
+            }
+            #container1 {
+                width:49%;
+                border: 3px solid rgb(98, 152, 219);
+                border-radius: 20px;
+                box-shadow: 4px 5px 6px 7px gray;
+            }
+            #container2 {
+                width: 49%;
+                background: white;
+                border: 3px solid rgb(98, 152, 219);
+                border-radius: 10px;
+                box-shadow: 4px 5px 6px 7px #161414;
+            }
+            .button {
+                margin: 0;
+            }
+            .stoke_img {
+                margin: 50px;
+                border: 3px solid rgb(98, 152, 219);
+                box-shadow: 4px 5px 6px 7px gray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1> About </h1>
+    <p class = "text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    </header>
+    <div class ="main">
+        <div id = "container1">
+            <img src = "stoke_img.jpeg" alt ="stoke_img" class="stoke_img">
+        </div>
+        <div id ="container2">
+            <div class ="button">
+                <button onmouseover = "histor()"> History </button>
+                <button onmouseover = "vision()"> Vision </button>
+                <button onmouseover = "goal()"> Goals </button>
+            </div>
+            <div id = "content" style="background: white;margin: 0; ">
+                <p id ="his" style = "text-align:left;" class ="sit"> History </p>
+                <p id = "visi" style = "text-align:left; display: none;" class = "sit"> Vision </p>
+                <p id = "gol" style = "text-align:left; display: none;" class = "sit"> Goal </p>
+
+                <p id = "describe_his" class = "too"> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ut laborum praesentium ullam suscipit rem, eaque at repellat, ab quibusdam nostrum, impedit culpa debitis iste eum facilis reiciendis maxime!
+                </p>
+                <p id = "describe_vis" class = "too" style = "display: none;"> 
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum doloribus fugit dolore odit dignissimos porro sed earum veniam minus, sint modi. Earum aliquid perspiciatis, dignissimos explicabo aspernatur officiis doloremque quae.
+                </p>
+                <p id = "describe_goa" class = "too" style = "display: none;"> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dolorum nihil? Provident est perferendis aspernatur aut ducimus soluta nobis laudantium ipsum nam delectus earum placeat officia ut, magni pariatur amet.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type ="text/javascript">
+        function histor(){
+            document.getElementById("visi").style.display = "none";
+            document.getElementById("gol").style.display = "none";
+            document.getElementById("describe_vis").style.display = "none";
+            document.getElementById("describe_goa").style.display = "none";
+            document.getElementById("his").style.display = "block";
+            document.getElementById("describe_his").style.display = "block";
+        }
+
+        function vision(){
+            document.getElementById("his").style.display = "none";
+            document.getElementById("gol").style.display = "none";
+            document.getElementById("describe_his").style.display = "none";
+            document.getElementById("describe_goa").style.display = "none";
+            document.getElementById("describe_vis").style.display = "block";
+            document.getElementById("visi").style.display = "block";
+        }
+
+        function goal(){
+            document.getElementById("visi").style.display = "none";
+            document.getElementById("his").style.display = "none";
+            document.getElementById("describe_vis").style.display = "none";
+            document.getElementById("describe_his").style.display = "none";
+            document.getElementById("gol").style.display = "block";
+            document.getElementById("describe_goa").style.display = "block";
+        }
+    </script>
+</body>
+</html>

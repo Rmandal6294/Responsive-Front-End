@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title> Contact Bengal Programmer </title>
+    <style>
+        html body{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(217, 222, 235);
+        }
+        a{
+            text-decoration: none;
+        }
+        header > nav > a{
+            color: white;
+            background-color: black;
+            padding: 10px;
+            margin: 5px auto;
+        }
+        header > nav > a:hover {
+            border: 2px solid white;
+            border-radius: 14px;
+            box-shadow: 2px 3px 40px 4px rgb(189, 186, 186);
+        }
+        header {
+            border: 2px solid white;
+            border-radius: 14px;
+            box-shadow: 2px 3px 40px 4px rgb(189, 186, 186);
+        }
+        header{
+            background-color: black;
+            padding: 20px;
+        }
+        nav{
+            display: flex;
+        }
+        .contact{
+            padding: 10px;
+        }
+        h1{
+            background-color: gold;
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        label{
+            width: 100%;
+            float: left;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        label:hover{
+            font-size: large;
+            text-shadow: 2px 2px gray;
+        }
+        input{
+            width: 88%;
+            padding: 10px;
+            margin: 5px;
+            
+        }
+        textarea{
+            width: 88%;
+            padding: 10px;
+            margin: 5px;
+        }
+        .send{
+            width: 88%;
+            padding: 10px;
+            margin: 10px;
+            background-color: blue;
+            border: none;
+            border-radius: 20px;
+            color: aliceblue;
+            transition: .5s;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .send:hover{
+            background: crimson;
+            box-shadow: 2px 3px 20px 4px black;
+        }
+        .reset{
+            background: transparent;
+            text-align: center;
+            border: none;
+            color: blue;
+            padding: 10px;
+        }
+        form{
+            border: 2px solid gold;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        main{
+            margin: 2px auto;
+        }
+
+        .img_section{
+            display: none;
+        }
+        @media only screen and (min-width: 480px){
+            main{
+                display: flex;
+                width: 100%;
+            }
+            .img_section{
+                width: 60%;
+                padding: 10px;
+                display: block;
+            }
+            .contact{
+                width: 40%;
+            }
+            img {
+                height: 100%;
+                border-radius: 30%;
+            }
+            img:hover{
+                border: 3px solid gold;
+            }
+
+            body{
+                background-image: url("stoke_img.jpeg");
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <i class="material-icons"> home </i>
+            </a>
+            <a href="Index.html">
+                <i class="material-icons"> person </i>
+            </a>
+            <a href="Index.html">
+                <i class="material-icons"> explore </i>
+            </a>
+            <a href="Index.html">
+                <i class="material-icons"> history_edu </i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class ="img_section">
+            <img src = "banner website.jpg" alt="img" width="98%">
+        </div>
+		<section class="contact">
+			<h1>Contact Us</h1>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" placeholder="name or username" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" placeholder="email" required>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" placeholder="Enter your words..." required></textarea><br>
+				<button type="submit" class ="send">Send</button><br>
+                <button type="reset" class="reset"> Reset </button>
+			</form>
+		</section>
+	</main>
+</body>
+</html>

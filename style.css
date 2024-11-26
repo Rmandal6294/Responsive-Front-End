@@ -1,0 +1,214 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(245, 237, 237);
+    box-sizing: border-box;
+    user-select: none;
+}
+.container {
+    width: 100%;
+    height: 80px;
+}
+.container > .img {
+    height: 80px;
+    mix-blend-mode: multiply;
+    text-align: center;
+}
+.container > .img > img {
+    height: 100px;
+}
+.container > .links > a {
+    margin:20px;
+    color: rgba(0, 0, 255, 0.833);
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    text-shadow: 1px 1px gray;
+}
+.container > .links {
+    text-align: right;
+    display: none;
+}
+#cd1 {
+    display: none;
+}
+@media screen and (min-width: 875px) {
+    .container > .links {
+        text-align: right;
+        display: block;
+    }
+
+    #cd1 {
+        display: block;
+    }
+    .container > .links > a:hover {
+        color: whitesmoke;
+        background-color: crimson;
+        padding: 8px;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid white;
+        box-shadow: 0 0 10px rgb(79, 78, 78);
+    }
+
+    header {
+        display: flex;
+    }
+
+    .container > .img > img {
+        height: 80px;
+    }
+
+    .container > .img {
+        text-align: left;
+    }
+}
+
+main {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+main > h1 {
+    color: crimson;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 15px;
+    text-shadow: 5px 2px black;
+}
+main > h1:hover {
+    text-shadow: 0 0 40px red, 0 0 40px crimson;
+}
+.read {
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main > #input {
+    background: transparent;
+    color: white;
+    font-family:monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 2px solid white;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+}
+main > #input:hover {
+    box-shadow: 0 0 40px whitesmoke, 0 0 40px wheat;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: crimson;
+    color: blue;
+}
+main > .read:hover {
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 4px 2px black;
+    color: blue;
+    cursor: pointer;
+}
+footer {
+    box-sizing: border-box;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+footer > ul {
+    list-style-type: none;
+    margin-top: 36px;
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 400px;
+    background-color: #414141;
+}
+footer > img {
+    border-bottom-right-radius: 400px;
+    background-color: #414141;
+}
+footer > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+}
+footer > ul > li > p > a {
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+@media screen and (min-width: 484px){
+    footer > ul > li:nth-child(4) {
+        display: flex;
+    }
+}
+#container {
+    max-width: 100%;
+    overflow: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+#box {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 2s;
+}
+#box:hover {
+    box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+    transform: rotateY(360deg);
+}
+#box > img {
+    border-radius: 20px;
+    box-shadow: 0 0 20px gray, 0 0 30px lightgray;
+}
+.boxtext {
+    text-align: center;
+    background-color: #333;
+    color: aqua;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    box-shadow: 0 0 20px gray, 0 0 30px lightgray;
+    border-radius: 20px;
+}
+.Social > h1{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    text-decoration: overline;
+    font-style: oblique;
+    text-shadow: 5px 2px black;
+}
+
+.see {
+    background: transparent;
+
+}
+#icon {
+    width : 40px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px gray, 0 0 30px lightgray;
+}
+#icon2d {
+    color: blue;
+    background-color: rgb(177, 174, 174);
+    width : 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    float: right;
+    box-shadow: 0 0 20px gray, 0 0 30px lightgray;
+}
+#icon:first-child {
+    height: 46px;
+    width : 46px;
+}
